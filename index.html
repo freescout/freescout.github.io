@@ -1,37 +1,611 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Neethu JACOB</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neethu Jacob - Développeuse Full Stack</title>
+    <meta
+      name="description"
+      content="Neethu Jacob, développeuse full stack JavaScript/TypeScript basée à Rennes - React, Node.js, systèmes distribués. À la recherche d'un CDI."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <div class="logo">Neethu Jacob</div>
+        <ul class="nav-links">
+          <li><a href="#about" data-i18n="nav.about"></a></li>
+          <li>
+            <a href="#experience" data-i18n="nav.experience"></a>
+          </li>
+          <li><a href="#projects" data-i18n="nav.projects"></a></li>
+          <li><a href="#skills" data-i18n="nav.skills"></a></li>
+          <li>
+            <a href="#contact" class="nav-cta" data-i18n="nav.contact"></a>
+          </li>
+        </ul>
+        <div class="nav-right">
+          <button
+            class="icon-toggle"
+            id="langToggle"
+            aria-label="Changer de langue / Switch language"
+          >
+            FR / EN
+          </button>
+          <button
+            class="icon-toggle"
+            id="themeToggle"
+            aria-label="Basculer le thème sombre"
+          >
+            🌙 <span data-i18n="theme.dark"></span>
+          </button>
+          <button
+            class="nav-toggle"
+            id="navToggle"
+            aria-label="Ouvrir le menu"
+            aria-expanded="false"
+          >
+            ☰
+          </button>
+        </div>
+      </div>
+      <nav class="mobile-menu" id="mobileMenu">
+        <a href="#about" data-i18n="nav.about"></a>
+        <a href="#experience" data-i18n="nav.experience"></a>
+        <a href="#projects" data-i18n="nav.projects"></a>
+        <a href="#skills" data-i18n="nav.skills"></a>
+        <a href="#contact" data-i18n="nav.contact"></a>
+      </nav>
+    </header>
 
-  <div class="card">
-    <h1>Neethu JACOB</h1>
-    <h2>Full-stack TypeScript Developer</h2>
+    <section class="hero">
+      <div class="container">
+        <div class="avatar">
+          <img
+            src="assets/photo.jpg"
+            alt="Neethu Jacob"
+            onerror="
+              this.style.display = 'none';
+              this.parentElement.textContent = 'NJ';
+            "
+          />
+        </div>
+        <h1>Neethu Jacob</h1>
+        <div class="hero-tagline" data-i18n="hero.tagline"></div>
+        <div class="pill">
+          <span class="dot"></span>
+          <span data-i18n="hero.pill"></span>
+        </div>
+        <p class="sub" data-i18n="hero.sub"></p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn-primary" data-i18n="hero.cta1"></a>
+          <a href="#projects" class="btn-secondary" data-i18n="hero.cta2"></a>
+        </div>
+      </div>
+    </section>
 
-    <p class="location">Rennes, France • Open to remote</p>
+    <section id="about">
+      <div class="container">
+        <div class="eyebrow" data-i18n="about.eyebrow"></div>
+        <h2 class="section-title" data-i18n="about.title"></h2>
+        <div class="about-intro" id="aboutIntro">
+          <p data-i18n="about.p1"></p>
+          <p data-i18n="about.p2"></p>
+          <p data-i18n="about.p3"></p>
+        </div>
+        <div class="fact-strip">
+          <div class="fact-chip">
+            <div class="fact-label" data-i18n="about.fact.location"></div>
+            <div class="fact-value">Rennes, France</div>
+          </div>
+          <div class="fact-chip">
+            <div class="fact-label" data-i18n="about.fact.looking"></div>
+            <div class="fact-value" data-i18n="about.fact.lookingval"></div>
+          </div>
+          <div class="fact-chip">
+            <div class="fact-label" data-i18n="about.fact.languages"></div>
+            <div class="fact-value" data-i18n="about.fact.languagesval"></div>
+          </div>
+          <div class="fact-chip">
+            <div class="fact-label" data-i18n="about.fact.education"></div>
+            <div class="fact-value">M2 Rennes 1 · MCA NIT Calicut</div>
+          </div>
+          <div class="fact-chip">
+            <div class="fact-label" data-i18n="about.fact.stack"></div>
+            <div class="fact-value">React · Node.js · TypeScript</div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <p class="stack">
-     React • TypeScript • Node.js  
-• MySQL • MongoDB • Redis • RabbitMQ
-    </p>
+    <section id="experience" style="background: var(--bg-soft)">
+      <div class="container">
+        <div class="eyebrow" data-i18n="exp.eyebrow"></div>
+        <h2 class="section-title" data-i18n="exp.title"></h2>
+        <div class="timeline">
+          <div class="tjob">
+            <div class="tjob-head">
+              <div class="tjob-title" data-i18n="exp.job1.title"></div>
+              <div class="tjob-dates">Mai 2022 – Juin 2025</div>
+            </div>
+            <div class="tjob-place">Rennes, France</div>
+            <ul id="job1list">
+              <li>
+                <details class="exp-detail">
+                  <summary data-i18n="exp.job1.l1"></summary>
+                  <div class="detail-body">
+                    <p data-i18n="exp.job1.l1.intro"></p>
+                    <ul>
+                      <li data-i18n="exp.job1.l1.a"></li>
+                      <li data-i18n="exp.job1.l1.b"></li>
+                      <li data-i18n="exp.job1.l1.c"></li>
+                    </ul>
+                  </div>
+                </details>
+              </li>
+              <li>
+                <details class="exp-detail">
+                  <summary data-i18n="exp.job1.l2"></summary>
+                  <div class="detail-body">
+                    <p data-i18n="exp.job1.l2.intro"></p>
+                    <ul>
+                      <li data-i18n="exp.job1.l2.a"></li>
+                      <li data-i18n="exp.job1.l2.b"></li>
+                      <li data-i18n="exp.job1.l2.c"></li>
+                      <li data-i18n="exp.job1.l2.d"></li>
+                    </ul>
+                  </div>
+                </details>
+              </li>
+              <li>
+                <details class="exp-detail">
+                  <summary data-i18n="exp.job1.l3"></summary>
+                  <div class="detail-body">
+                    <p data-i18n="exp.job1.l3.intro"></p>
+                    <ul>
+                      <li data-i18n="exp.job1.l3.a"></li>
+                      <li data-i18n="exp.job1.l3.b"></li>
+                      <li data-i18n="exp.job1.l3.c"></li>
+                      <li data-i18n="exp.job1.l3.d"></li>
+                    </ul>
+                  </div>
+                </details>
+              </li>
+              <li data-i18n="exp.job1.l4"></li>
+            </ul>
+            <div class="stack-line">
+              Node.js · React · MySQL · RabbitMQ · Redis · Docker · OpenAPI ·
+              Gherkin · Playwright
+            </div>
+          </div>
 
-    <div class="tags">
-      <span>Backend</span>
-      <span>APIs</span>
-      <span>Real-time</span>
-      <span>Scalable</span>
+          <div class="tjob">
+            <div class="tjob-head">
+              <div class="tjob-title" data-i18n="exp.job2.title"></div>
+              <div class="tjob-dates">Mars 2021 – Mars 2022</div>
+            </div>
+            <div class="tjob-place">Angers, France</div>
+            <ul>
+              <li data-i18n="exp.job2.l1"></li>
+              <li data-i18n="exp.job2.l2"></li>
+            </ul>
+            <div class="stack-line">Node.js · MongoDB · Meteor</div>
+          </div>
+
+          <div class="tjob">
+            <div class="tjob-head">
+              <div class="tjob-title" data-i18n="exp.job3.title"></div>
+              <div class="tjob-dates">Jan 2019 – Juil 2019</div>
+            </div>
+            <div class="tjob-place">Bangalore, Inde</div>
+            <ul>
+              <li data-i18n="exp.job3.l1"></li>
+            </ul>
+            <div class="stack-line">React · Material UI · CSS</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="program">
+      <div class="container">
+        <div class="eyebrow" data-i18n="program.eyebrow"></div>
+        <h2 class="section-title" data-i18n="program.title"></h2>
+        <div
+          style="
+            background: var(--card-bg);
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            padding: 28px 32px;
+          "
+        >
+          <div class="tjob-head" style="margin-bottom: 4px">
+            <div class="tjob-title" data-i18n="program.subtitle"></div>
+            <div class="tjob-dates">Fév – Mars 2026</div>
+          </div>
+          <div class="tjob-place" data-i18n="program.place"></div>
+          <ul
+            style="
+              margin-left: 18px;
+              color: var(--ink-soft);
+              font-size: 0.94rem;
+              margin-top: 12px;
+            "
+          >
+            <li style="margin-bottom: 6px" data-i18n="program.l1"></li>
+            <li data-i18n="program.l2"></li>
+          </ul>
+          <div class="stack-line">
+            React · Vite · Tailwind · TypeScript · MySQL/MariaDB
+          </div>
+          <div class="project-links" style="margin-top: 14px">
+            <a
+              href="https://n2wm9at8qyi9.report.alt-tools.tech/"
+              target="_blank"
+              data-i18n="program.link"
+            ></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <div class="eyebrow" data-i18n="proj.eyebrow"></div>
+        <h2 class="section-title" data-i18n="proj.title"></h2>
+        <div class="projects-grid">
+          <div class="project-card">
+            <div
+              class="project-thumb carousel"
+              data-images="assets/projects/clausify/siteList.png,assets/projects/clausify/siteDetail.png,assets/projects/clausify/clauses.png"
+            >
+              <img
+                src="assets/projects/clausify/siteList.png"
+                alt="Clausify — aperçu"
+                loading="lazy"
+              />
+              <button
+                class="carousel-btn prev"
+                aria-label="Image précédente"
+                type="button"
+              >
+                ‹
+              </button>
+              <button
+                class="carousel-btn next"
+                aria-label="Image suivante"
+                type="button"
+              >
+                ›
+              </button>
+              <div class="carousel-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3>Clausify</h3>
+              <p data-i18n="proj.clausify.desc">
+                Plateforme multi-composants d'analyse de conditions générales
+                par IA — application web, extension Chrome et API backend
+                fonctionnant en temps réel.
+              </p>
+              <div class="tag-row">
+                <span class="tag">React 19</span>
+                <span class="tag">TypeScript</span>
+                <span class="tag">Tailwind v4</span>
+                <span class="tag">Node.js</span>
+                <span class="tag">MySQL</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://github.com/freescout/clausify"
+                  target="_blank"
+                  data-i18n="proj.link.web"
+                  >Application web →</a
+                >
+                <a
+                  href="https://github.com/freescout/clausify-extension"
+                  target="_blank"
+                  data-i18n="proj.link.ext"
+                  >Extension →</a
+                >
+                <a
+                  href="https://github.com/freescout/clausify-api"
+                  target="_blank"
+                  data-i18n="proj.link.api"
+                  >API →</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-thumb">Tasty Tales</div>
+            <div class="project-body">
+              <h3>Tasty Tales</h3>
+              <p data-i18n="proj.tasty.desc">
+                Application full stack moderne (Node.js/TypeScript, Express,
+                MongoDB, Next.js) avec déploiements automatisés et couverture de
+                tests API complète.
+              </p>
+              <div class="tag-row">
+                <span class="tag">Next.js</span>
+                <span class="tag">MongoDB</span>
+                <span class="tag">Jest</span>
+                <span class="tag">OpenAPI</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://github.com/freescout/recipe-organizer"
+                  target="_blank"
+                  data-i18n="proj.link.project"
+                  >Voir le projet →</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" style="background: var(--bg-soft)">
+      <div class="container">
+        <div class="eyebrow" data-i18n="skills.eyebrow"></div>
+        <h2 class="section-title" data-i18n="skills.title"></h2>
+        <div class="skills-cols">
+          <div class="skill-col">
+            <h4 data-i18n="skills.frontend"></h4>
+            <p>React, Next.js, HTML/CSS, Material UI, Storybook</p>
+          </div>
+          <div class="skill-col">
+            <h4 data-i18n="skills.backend"></h4>
+            <p>Node.js, Express, REST API, OpenAPI</p>
+          </div>
+          <div class="skill-col">
+            <h4 data-i18n="skills.database"></h4>
+            <p>MySQL, MongoDB</p>
+          </div>
+          <div class="skill-col">
+            <h4 data-i18n="skills.security"></h4>
+            <p data-i18n="skills.security.val"></p>
+          </div>
+          <div class="skill-col">
+            <h4 data-i18n="skills.infra"></h4>
+            <p>Redis, RabbitMQ</p>
+          </div>
+          <div class="skill-col">
+            <h4 data-i18n="skills.testing"></h4>
+            <p>Jest, Playwright, Gherkin, Supertest</p>
+          </div>
+          <div class="skill-col">
+            <h4 data-i18n="skills.devops"></h4>
+            <p>Docker, Docker Compose, Yarn Workspaces</p>
+          </div>
+          <div class="skill-col">
+            <h4 data-i18n="skills.tools"></h4>
+            <p>VSCode, Git, Postman, MongoDB Atlas/Compass</p>
+          </div>
+          <div class="skill-col">
+            <h4 data-i18n="skills.methodologies"></h4>
+            <p>Agile (Scrum)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="extras">
+      <div class="container">
+        <div class="eyebrow" data-i18n="extras.eyebrow"></div>
+        <h2 class="section-title" data-i18n="extras.title"></h2>
+        <div class="extras-grid">
+          <div class="extras-col">
+            <h4 data-i18n="extras.softskills.title"></h4>
+            <ul class="softskill-list">
+              <li data-i18n="extras.ss1"></li>
+              <li data-i18n="extras.ss2"></li>
+              <li data-i18n="extras.ss3"></li>
+              <li data-i18n="extras.ss4"></li>
+            </ul>
+          </div>
+          <div class="extras-col">
+            <h4 data-i18n="extras.hobbies.title"></h4>
+            <div class="hobby-item">
+              <div class="hobby-name" data-i18n="extras.hobby1.name"></div>
+            </div>
+            <div class="hobby-item">
+              <div class="hobby-name" data-i18n="extras.hobby2.name"></div>
+            </div>
+            <div class="hobby-item">
+              <div class="hobby-name" data-i18n="extras.hobby3.name"></div>
+              <div class="hobby-note" data-i18n="extras.hobby3.note"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="contact-box">
+          <h2 data-i18n="contact.title"></h2>
+          <p data-i18n="contact.sub"></p>
+          <div class="contact-actions">
+            <a
+              href="https://linkedin.com/in/neethujacob/"
+              target="_blank"
+              class="primary"
+              data-i18n="contact.linkedin"
+            ></a>
+            <a href="https://github.com/freescout" target="_blank" class="ghost"
+              >GitHub</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <span data-i18n="footer.text"></span>
+    </footer>
+
+    <div class="lightbox-overlay" id="lightbox">
+      <img id="lightboxImg" src="" alt="" />
     </div>
 
-    <div class="buttons">
-      <a class="btn primary" href="#">View Projects</a>
-      <a class="btn secondary" href="https://github.com/freescout" target="_blank">GitHub</a>
-      <a class="btn secondary" href="#">LinkedIn</a>
-    </div>
-  </div>
+    <script src="fr.js"></script>
+    <script src="en.js"></script>
+    <script>
+      const translations = window.translations || {};
 
-</body>
+      function validateTranslations() {
+        const frKeys = Object.keys(translations.fr || {}).sort();
+        const enKeys = Object.keys(translations.en || {}).sort();
+        const missingInEn = frKeys.filter(
+          (key) => !(key in (translations.en || {})),
+        );
+        const missingInFr = enKeys.filter(
+          (key) => !(key in (translations.fr || {})),
+        );
+
+        if (missingInEn.length || missingInFr.length) {
+          console.warn("Translation key mismatch detected:", {
+            missingInEn,
+            missingInFr,
+          });
+        }
+      }
+
+      function setLanguage(lang) {
+        const normalizedLang = lang === "en" ? "en" : "fr";
+        document.documentElement.lang = normalizedLang;
+
+        const locale = translations[normalizedLang] || {};
+        const themeIsDark =
+          document.documentElement.getAttribute("data-theme") === "dark";
+
+        document.querySelectorAll("[data-i18n]").forEach((element) => {
+          const key = element.getAttribute("data-i18n");
+
+          if (element === themeLabel) {
+            const themeKey = themeIsDark ? "theme.light" : "theme.dark";
+            element.textContent = locale[themeKey] || "";
+            return;
+          }
+
+          element.textContent =
+            locale[key] ||
+            translations.fr?.[key] ||
+            translations.en?.[key] ||
+            "";
+        });
+
+        localStorage.setItem("portfolioLang", normalizedLang);
+      }
+
+      const root = document.documentElement;
+      const themeBtn = document.getElementById("themeToggle");
+      const themeLabel = themeBtn.querySelector("span");
+
+      function applyTheme(isDark) {
+        root.setAttribute("data-theme", isDark ? "dark" : "light");
+        themeBtn.firstChild.textContent = isDark ? "☀️ " : "🌙 ";
+        const labelKey = isDark ? "theme.light" : "theme.dark";
+        themeLabel.setAttribute("data-i18n", labelKey);
+        if (root.lang) {
+          const currentLocale = translations[root.lang] || {};
+          themeLabel.textContent = currentLocale[labelKey] || "";
+        }
+      }
+
+      const langBtn = document.getElementById("langToggle");
+      langBtn.addEventListener("click", () => {
+        const current = document.documentElement.lang === "en" ? "fr" : "en";
+        setLanguage(current);
+      });
+
+      const savedLang = localStorage.getItem("portfolioLang");
+      const initialLang = savedLang === "en" ? "en" : "fr";
+      document.documentElement.lang = initialLang;
+
+      validateTranslations();
+      setLanguage(initialLang);
+
+      const prefersDark =
+        window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches;
+      applyTheme(prefersDark);
+
+      themeBtn.addEventListener("click", () => {
+        const isDark = root.getAttribute("data-theme") === "dark";
+        applyTheme(!isDark);
+      });
+
+      document.querySelectorAll('a[href^="#"]').forEach((a) => {
+        a.addEventListener("click", (e) => {
+          const target = document.querySelector(a.getAttribute("href"));
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: "smooth" });
+            document.getElementById("mobileMenu").classList.remove("open");
+            document
+              .getElementById("navToggle")
+              .setAttribute("aria-expanded", "false");
+          }
+        });
+      });
+
+      const navToggle = document.getElementById("navToggle");
+      const mobileMenu = document.getElementById("mobileMenu");
+      navToggle.addEventListener("click", () => {
+        const isOpen = mobileMenu.classList.toggle("open");
+        navToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      });
+
+      document.querySelectorAll(".project-thumb.carousel").forEach((thumb) => {
+        const images = thumb.dataset.images.split(",");
+        const imgEl = thumb.querySelector("img");
+        const dots = thumb.querySelectorAll(".dot");
+        let index = 0;
+
+        function show(i) {
+          index = (i + images.length) % images.length;
+          imgEl.src = images[index];
+          dots.forEach((d, di) => d.classList.toggle("active", di === index));
+        }
+
+        thumb.querySelector(".prev").addEventListener("click", (e) => {
+          e.preventDefault();
+          show(index - 1);
+        });
+        thumb.querySelector(".next").addEventListener("click", (e) => {
+          e.preventDefault();
+          show(index + 1);
+        });
+      });
+
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImg = document.getElementById("lightboxImg");
+      document
+        .querySelectorAll(".project-thumb.carousel img")
+        .forEach((img) => {
+          img.addEventListener("click", () => {
+            lightboxImg.src = img.src;
+            lightboxImg.alt = img.alt;
+            lightbox.classList.add("open");
+          });
+        });
+      lightbox.addEventListener("click", () =>
+        lightbox.classList.remove("open"),
+      );
+    </script>
+  </body>
 </html>
