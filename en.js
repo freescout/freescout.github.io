@@ -94,7 +94,8 @@ window.translations.en = {
   "proj.link.api": "API ↗",
   "proj.tasty.desc":
     "A modern full stack app (Node.js/TypeScript, Express, MongoDB, Next.js) with automated deployments and full API test coverage.",
-  "proj.link.project": "View project ↗",
+  "proj.link.demo": "Live demo ↗",
+  "proj.link.code": "Code ↗",
   "skills.eyebrow": "Technical skills",
   "skills.title": "Skills",
   "skills.frontend": "Frontend",

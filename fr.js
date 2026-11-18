@@ -92,9 +92,10 @@ window.translations.fr = {
   "proj.link.web": "Application web ↗",
   "proj.link.ext": "Extension ↗",
   "proj.link.api": "API ↗",
+  "proj.link.demo": "Démo en ligne ↗",
+  "proj.link.code": "Code ↗",
   "proj.tasty.desc":
     "Application full stack moderne (Node.js/TypeScript, Express, MongoDB, Next.js) avec déploiements automatisés et couverture de tests API complète.",
-  "proj.link.project": "Voir le projet ↗",
   "skills.eyebrow": "Compétences techniques",
   "skills.title": "Compétences",
   "skills.frontend": "Frontend",

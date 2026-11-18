@@ -329,7 +329,13 @@
           </div>
 
           <div class="project-card">
-            <div class="project-thumb">Tasty Tales</div>
+            <div class="project-thumb">
+              <img
+                src="assets/projects/tasty-tales/recipes.png"
+                alt="Tasty Tales - aperçu de l'application"
+                loading="lazy"
+              />
+            </div>
             <div class="project-body">
               <h3>Tasty Tales</h3>
               <p data-i18n="proj.tasty.desc">
@@ -345,11 +351,15 @@
               </div>
               <div class="project-links">
                 <a
+                  href="https://recipe-organizer-client.vercel.app/"
+                  target="_blank"
+                  data-i18n="proj.link.demo"
+                ></a>
+                <a
                   href="https://github.com/freescout/recipe-organizer"
                   target="_blank"
-                  data-i18n="proj.link.project"
-                  >Voir le projet →</a
-                >
+                  data-i18n="proj.link.code"
+                ></a>
               </div>
             </div>
           </div>
@@ -368,7 +378,7 @@
           </div>
           <div class="skill-col">
             <h4 data-i18n="skills.backend"></h4>
-            <p>Node.js, Express, REST API, OpenAPI</p>
+            <p>Node.js, TypeScript, Express, REST API, OpenAPI</p>
           </div>
           <div class="skill-col">
             <h4 data-i18n="skills.database"></h4>
@@ -384,7 +394,7 @@
           </div>
           <div class="skill-col">
             <h4 data-i18n="skills.testing"></h4>
-            <p>Jest, Playwright, Gherkin, Supertest</p>
+            <p>Jest, Playwright (E2E), Gherkin, Supertest</p>
           </div>
           <div class="skill-col">
             <h4 data-i18n="skills.devops"></h4>
@@ -392,11 +402,11 @@
           </div>
           <div class="skill-col">
             <h4 data-i18n="skills.tools"></h4>
-            <p>VSCode, Git, Postman, MongoDB Atlas/Compass</p>
+            <p>VSCode, Git, Claude Code, Postman</p>
           </div>
           <div class="skill-col">
             <h4 data-i18n="skills.methodologies"></h4>
-            <p>Agile (Scrum)</p>
+            <p>Agile (Scrum), Clean Code</p>
           </div>
         </div>
       </div>
@@ -594,15 +604,13 @@
 
       const lightbox = document.getElementById("lightbox");
       const lightboxImg = document.getElementById("lightboxImg");
-      document
-        .querySelectorAll(".project-thumb.carousel img")
-        .forEach((img) => {
-          img.addEventListener("click", () => {
-            lightboxImg.src = img.src;
-            lightboxImg.alt = img.alt;
-            lightbox.classList.add("open");
-          });
+      document.querySelectorAll(".project-thumb img").forEach((img) => {
+        img.addEventListener("click", () => {
+          lightboxImg.src = img.src;
+          lightboxImg.alt = img.alt;
+          lightbox.classList.add("open");
         });
+      });
       lightbox.addEventListener("click", () =>
         lightbox.classList.remove("open"),
       );

@@ -514,9 +514,10 @@ section {
   font-weight: 700;
   font-size: 1.3rem;
   letter-spacing: 0.02em;
+  overflow: hidden;
 }
 
-.project-thumb.carousel img {
+.project-thumb img {
   width: 100%;
   height: 100%;
   object-fit: contain;
@@ -642,22 +643,22 @@ section {
 }
 
 .hobby-item {
-  margin-bottom: 14px;
-}
-
-.hobby-item:last-child {
+  padding: 8px 0;
   margin-bottom: 0;
+  border-bottom: 1px solid var(--line);
 }
-
+.hobby-item:last-child {
+  border-bottom: none;
+}
 .hobby-item .hobby-name {
   font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--ink);
-}
-
-.hobby-item .hobby-note {
-  font-size: 0.85rem;
+  font-weight: 400;
   color: var(--ink-soft);
+}
+.hobby-item .hobby-note {
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+  margin-top: 2px;
 }
 
 .contact-box {
@@ -746,7 +747,7 @@ footer {
   }
 }
 
-.project-thumb.carousel {
+.project-thumb {
   position: relative;
 }
 .carousel-btn {
